@@ -15,16 +15,38 @@
 
       <!-- Aquí se encuentra la pantalla del login-->
       <div id="pantalla1">
-        <input type="password" id="clave" placeholder="Ingresa la clave" size="25">
+        <br>
+        <img src="inicio.png"  id="inicio">
+        <br>
+        <input type="password" id="clave" placeholder=" Ingresa la clave" size="15">
+        <br>
         <button type="button" id="capturarClave">INGRESAR </button>
+        <br>
+
       </div>
+      <!--******* Aquí se encuentra la PANTALLA 2 ********-->
       <div id="pantalla2">
         <h2>Ingresa tu mensaje:</h2>
         <input type="text" id ="mensaje" placeholder="Mensaje Secreto...">
         <h2>Ingresa tu Numero Cipher-love:</h2>
-        <input type="number" id="offset">
+        <input type="number" id="offset" min="1">
+        <br>
         <button type ="button" id="cifrar">CIFRAR</button>
         <button type ="button" id="descifrar">DESCIFRAR</button>
+      </div>
+
+      <!--******* Aquí se encuentra la PANTALLA 3 ********-->
+      <div id="pantalla3">
+        <h2>Su mensaje secreto es:</h2>
+        <section id='escribirmensaje'>
+        </section>
+        <button type="button" id="volver">VOLVER</button>
+        <button type="button" id="salir">SALIR</button>
+      </div>
+
+      <!--******* Aquí se encuentra la PANTALLA 4 ********-->
+      <div id='pantalla4'>
+        <img src="pant4.png"  id = "fin">
       </div>
 
     </main>

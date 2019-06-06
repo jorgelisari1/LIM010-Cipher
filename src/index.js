@@ -18,11 +18,24 @@ ingresar.addEventListener('click',() =>
           alert("Ya utilizaste todos tus intentos, en este momento no podrás ingresar.");
         }else {
 
-          //vacio el campo de contraseña 
+          //vacio el campo de contraseña
            document.getElementById('clave'). value = "";
            alert("Porfavor ingrese contraseña correcta, te quedan "+ (3-cont) +"  intentos.");
            cont= cont+1;
       }
+ });
 
+//obtengo el click de vovler
+ const regresar= document.getElementById('volver');
 
+ regresar.addEventListener('click',()=>{
+   document.getElementById('pantalla3').style.display = 'none';
+   document.getElementById('pantalla2').style.display = 'block';
+ });
+
+ //obtengo el click de salir
+ const exit= document.getElementById('salir');
+ exit.addEventListener('click',()=>{
+   document.getElementById('pantalla3').style.display = 'none';
+   document.getElementById('pantalla4').style.display = 'block';
  });
