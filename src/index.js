@@ -1,20 +1,21 @@
-//Aqui se encuentra el codigo de cipher
+//¡------------------------------Aqui se encuentra el codigo de cipher------------------------------!
+
 const string=document.getElementById('mensaje');
 const num=document.getElementById('offset');
 
 const cifrar = document.getElementById('cifrar');
 const descifrar =document.getElementById('descifrar');
-const escribirmensaje = document.getElementById('escribirmensaje');
+const escribirMensaje = document.getElementById('escribirMensaje');
 cifrar.addEventListener('click',()=>{
   const cadena = string.value;
   const n = num.value;
-  if(cadena != '' || n != ''){
-     escribirmensaje.innerHTML = cipher.encode(n,cadena);
-    document.getElementById('pantalla2').classList.add('mostrarocultar');
-    document.getElementById('pantalla3').classList.remove('mostrarocultar');
+  if(cadena != '' && n != ''){
+     escribirMensaje.innerHTML = cipher.encode(n,cadena);
+    document.getElementById('pantalla2').classList.add('mostrarOcultar');
+    document.getElementById('pantalla3').classList.remove('mostrarOcultar');
 
   }else{
-    alert ('faltan campos por llenar');
+    alert ('Faltan campos por llenar');
   }
 
 });
@@ -22,58 +23,61 @@ cifrar.addEventListener('click',()=>{
 descifrar.addEventListener('click',()=>{
   const cadena = string.value;
   const n = num.value;
-  if (cadena !='' || n !='') {
-     escribirmensaje.innerHTML = cipher.decode(n,cadena);
-    document.getElementById('pantalla2').classList.add('mostrarocultar');
-    document.getElementById('pantalla3').classList.remove('mostrarocultar');
+  if (cadena !='' && n !='') {
+     escribirMensaje.innerHTML = cipher.decode(n,cadena);
+    document.getElementById('pantalla2').classList.add('mostrarOcultar');
+    document.getElementById('pantalla3').classList.remove('mostrarOcultar');
   }else{
-    alert ('faltan campos por llenar');
+    alert ('Faltan campos por llenar');
   }
 
 });
 
-//guardo la contraseña ingresada por el usiario.
+// ¡---------------------------Aqui termina el codigo cipher-------------------------------------!
+// ¡--------------------------Aqui empieza el codigo de mi 1ra pantalla--------------------------!
+//guardo la contraseña ingresada por el usuario.
 const claveIngresada=document.getElementById('clave');
 //obtengo el click
 const ingresar= document.getElementById('capturarClave');
 //contador de las veces que ingresa la contraseña incorrecta
 let cont=1;
+
 //funcion de login
 ingresar.addEventListener('click',() =>
 {
 
   if(claveIngresada.value=='LABORATORIA'){
 
-        document.getElementById('pantalla1').classList.add('mostrarocultar');
-        document.getElementById('pantalla2').classList.remove('mostrarocultar');
+        document.getElementById('pantalla1').classList.add('mostrarOcultar');
+        document.getElementById('pantalla2').classList.remove('mostrarOcultar');
       }
       else  if(cont ==3)
         {
           alert("Ya utilizaste todos tus intentos, en este momento no podrás ingresar.");
-          document.getElementById('pantalla1').classList.add('mostrarocultar');
-          document.getElementById('pantalla4').classList.remove('mostrarocultar');
+          document.getElementById('pantalla1').classList.add('mostrarOcultar');
+          document.getElementById('pantalla4').classList.remove('mostrarOcultar');
         }else {
 
           //vacio el campo de contraseña
            document.getElementById('clave'). value = "";
-           alert("Porfavor ingrese contraseña correcta, te quedan "+ (3-cont) +"  intentos.");
+           alert("Por favor ingrese contraseña correcta, te quedan "+ (3-cont) +"  intentos.");
            cont= cont+1;
       }
  });
-
+// ¡--------------------Aqui termina el codigo de mi primera pantalla-------------------------!
 
 //obtengo el click de volver
  const regresar= document.getElementById('volver');
 
  regresar.addEventListener('click',()=>{
-   document.getElementById('pantalla3').classList.add('mostrarocultar');
-   document.getElementById('pantalla2').classList.remove('mostrarocultar');
+   document.getElementById('pantalla3').classList.add('mostrarOcultar');
+   document.getElementById('pantalla2').classList.remove('mostrarOcultar');
 
  });
 
  //obtengo el click de salir
  const exit= document.getElementById('salir');
  exit.addEventListener('click',()=>{
-   document.getElementById('pantalla3').classList.add('mostrarocultar');
-   document.getElementById('pantalla4').classList.remove('mostrarocultar');
+   document.getElementById('pantalla3').classList.add('mostrarOcultar');
+   document.getElementById('pantalla4').classList.remove('mostrarOcultar');
  });

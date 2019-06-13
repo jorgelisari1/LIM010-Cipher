@@ -12,7 +12,7 @@ describe('cipher', () => {
     });
 
     it('debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33',()=>{
-    assert.equal(cipher.encode(33,'ABCDEFGHIJKLMNOPQRSTUVWXYZ'),'HIJKLMNOPQRSTUVWXYZABCDEFG');
+    assert.equal(cipher.encode(33,'ABCDEFGHIJKLMNOPQRSTUVWXYZ?'),'HIJKLMNOPQRSTUVWXYZABCDEFG?');
     });
   });
 
@@ -23,7 +23,7 @@ describe('cipher', () => {
     });
 
     it('debería retornar "ABCDEFGHIJKLMNOPQRSTUVWXYZ" para "HIJKLMNOPQRSTUVWXYZABCDEFG" con offset 33',()=>{
-      assert.equal(cipher.decode(33,'HIJKLMNOPQRSTUVWXYZABCDEFG'),'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+      assert.equal(cipher.decode(33,'HIJKLMNOPQRSTUVWXYZABCDEFG?'),'ABCDEFGHIJKLMNOPQRSTUVWXYZ?');
     });
   });
 

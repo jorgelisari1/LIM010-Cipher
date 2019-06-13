@@ -1,17 +1,16 @@
 header {
-padding: 10px 10px ;
+width: 100%;
 text-align: center;
 }
 body {
-  background-color: #FAF3DD;
+  width: 100%;
+  background-image: url("img/fondo.png");
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
   background-size: cover;
-  -moz-background-size:cover;
-  -o-background-size:cover;
-}
 
-footer {
-  margin-top: 19em;
-  text-align: right;
 }
 
 #pantalla1 {
@@ -19,9 +18,14 @@ footer {
 
 }
 
+#logo{
+  width: 80%;
+  height: 100px;
+}
+
 #inicio{
   width: 100%;
-  height: 350px;
+  height: 310px;
 }
 
 #clave {
@@ -47,7 +51,6 @@ footer {
 	font-weight: bold;
 	max-width: 320px;
 	height: 65px;
-	margin-bottom: 200px;
 	overflow: hidden;
 	color:rgba(255,255,255,1);
 	cursor: pointer;
@@ -55,7 +58,7 @@ footer {
 	box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);
 	text-decoration: none;
 	transition: all ease 0.5s;
-	background:#AD3087;
+	background:#3A3951;
 
 }
 #capturarClave:hover {
@@ -67,6 +70,12 @@ footer {
   text-align: center;
   background-image: url(img/pant2.png);
   border: none;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+  background-size: cover;
+
 }
 
 legend {
@@ -74,10 +83,6 @@ legend {
   text-align: center;
   margin-left: 460px;
 
-}
-
-#pantalla3 {
-  text-align: center;
 }
 
 #mensaje {
@@ -100,6 +105,20 @@ legend {
  text-align: center;
 }
 
+#pantalla3 {
+  text-align: center;
+}
+
+legend {
+  height:250px;
+  width:400px;
+  padding-bottom:20px;
+  border-radius: 8px;
+  background-color: #E9E8E8;
+  border-width: medium;
+}
+
+
 #cifrar, #descifrar, #volver, #salir {
     margin-top: 30px;
     padding: 25px 10px;
@@ -120,11 +139,25 @@ legend {
 
 }
 
-.mostrarocultar {
+.mostrarOcultar {
   display: none;
 }
 #fin {
 
   width: 100%;
   height: 70%;
+}
+
+footer {
+text-align:right;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 50px;
+position:absolute;
+}
+
+#instagram, #facebook, #twitter{
+  width: 25px;
+  height: 25px;
 }
