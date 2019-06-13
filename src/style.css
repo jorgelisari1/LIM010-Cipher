@@ -3,8 +3,7 @@ padding: 10px 10px ;
 text-align: center;
 }
 body {
-  background-color: salmon;
-  background-image: url(fondo.png);
+  background-color: #FAF3DD;
   background-size: cover;
   -moz-background-size:cover;
   -o-background-size:cover;
@@ -65,9 +64,20 @@ footer {
 }
 
 #pantalla2 {
-  display: none;
   text-align: center;
-  background-image: url(pant2.png);
+  background-image: url(img/pant2.png);
+  border: none;
+}
+
+legend {
+  background-color: white;
+  text-align: center;
+  margin-left: 460px;
+
+}
+
+#pantalla3 {
+  text-align: center;
 }
 
 #mensaje {
@@ -110,17 +120,9 @@ footer {
 
 }
 
-#pantalla3 {
+.mostrarocultar {
   display: none;
-  text-align: center;
 }
-
-#pantalla4 {
-
-  display: none;
-  text-align: center;
-}
-
 #fin {
 
   width: 100%;

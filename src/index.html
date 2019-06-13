@@ -8,15 +8,15 @@
   <body >
     <!-- Aquí empieza el encabezado principal que se mantendrá en todasa las páginas de nuestro sitio web -->
       <header >
-           <img src="logo.png" id="logo">
+           <img src="img/logo.png" id="logo">
       </header>
     <!-- Aquí empieza el contenido principal de nuestra página -->
     <main>
 
       <!-- Aquí se encuentra la pantalla del login-->
-      <div id="pantalla1">
+      <div id="pantalla1" >
         <br>
-        <img src="inicio.png"  id="inicio">
+        <img src="img/inicio.png"  id="inicio">
         <br>
         <input type="password" id="clave" placeholder=" Ingresa la clave" size="15">
         <br>
@@ -25,28 +25,28 @@
 
       </div>
       <!--******* Aquí se encuentra la PANTALLA 2 ********-->
-      <div id="pantalla2">
-        <h2>Ingresa tu mensaje:</h2>
-        <input type="text" id ="mensaje" placeholder="Mensaje Secreto...">
-        <h2>Ingresa tu Numero Cipher-love:</h2>
-        <input type="number" id="offset" min="1">
+      <div id="pantalla2" class="mostrarocultar">
+        Ingresa tu mensaje: <input type="text" id ="mensaje" placeholder="Mensaje Secreto...">
+        <br>
+        <br>
+        Ingresa tu Numero Cipher-love: <input type="number" id="offset" min="1">
         <br>
         <button type ="button" id="cifrar">CIFRAR</button>
         <button type ="button" id="descifrar">DESCIFRAR</button>
       </div>
 
       <!--******* Aquí se encuentra la PANTALLA 3 ********-->
-      <div id="pantalla3">
+      <div id="pantalla3" class="mostrarocultar">
         <h2>Su mensaje secreto es:</h2>
-        <section id='escribirmensaje'>
-        </section>
+        <legend id="escribirmensaje" style="height:300px; width:400px; padding-bottom:20px;">
+        </legend>
         <button type="button" id="volver">VOLVER</button>
         <button type="button" id="salir">SALIR</button>
       </div>
 
       <!--******* Aquí se encuentra la PANTALLA 4 ********-->
-      <div id='pantalla4'>
-        <img src="pant4.png"  id = "fin">
+      <div id="pantalla4" class="mostrarocultar">
+        <img src="img/pant4.png"  id = "fin">
       </div>
 
     </main>
@@ -57,9 +57,9 @@
     </footer>
 
     <!-- Y aquí linkeamos con nuestro archivos de JAVASCRIPT-->
-    <script type="text/javascript" src=index.js>
+    <script type="text/javascript" src="index.js">
     </script>
-    <script type="text/javascript" src =cipher.js>
+    <script type="text/javascript" src ="cipher.js">
     </script>
 
   </body>
