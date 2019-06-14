@@ -6,10 +6,17 @@ const num=document.getElementById('offset');
 const cifrar = document.getElementById('cifrar');
 const descifrar =document.getElementById('descifrar');
 const escribirMensaje = document.getElementById('escribirMensaje');
+
 cifrar.addEventListener('click',()=>{
-  const cadena = string.value;
-  const n = num.value;
+  let cadena = string.value;
+  let n = num.value;
+  cadena = cadena.toUpperCase();
+
   if(cadena != '' && n != ''){
+    if(n<0){
+      n = n*(-1);
+      escribirMensaje.innerHTML = cipher.decode(n,cadena);
+    }
      escribirMensaje.innerHTML = cipher.encode(n,cadena);
     document.getElementById('pantalla2').classList.add('mostrarOcultar');
     document.getElementById('pantalla3').classList.remove('mostrarOcultar');
@@ -21,9 +28,14 @@ cifrar.addEventListener('click',()=>{
 });
 
 descifrar.addEventListener('click',()=>{
-  const cadena = string.value;
-  const n = num.value;
+  let cadena = string.value;
+  let n = num.value
+   cadena = cadena.toUpperCase();
   if (cadena !='' && n !='') {
+    if(n<0){
+      n = n*(-1);
+      escribirMensaje.innerHTML = cipher.encode(n,cadena);
+    }
      escribirMensaje.innerHTML = cipher.decode(n,cadena);
     document.getElementById('pantalla2').classList.add('mostrarOcultar');
     document.getElementById('pantalla3').classList.remove('mostrarOcultar');
@@ -64,6 +76,19 @@ ingresar.addEventListener('click',() =>
            cont= cont+1;
       }
  });
+
+ var input = document.getElementById('clave');
+
+
+input.addEventListener("keyup", (event)=> {
+
+  if (event.keyCode === 13) {
+
+    event.preventDefault();
+
+    document.getElementById('capturarClave').click();
+  }
+});
 // ¡--------------------Aqui termina el codigo de mi primera pantalla-------------------------!
 
 //obtengo el click de volver

@@ -13,7 +13,6 @@ window.cipher = {
             valorascii = string.charCodeAt(cont);
             result = (valorascii-65+(parseInt(offset,10)))%26+65;
             newletter = String.fromCharCode(result);
-            //alert(newletter);
             stringResult = stringResult + newletter;
           }
           cont = cont +1;
