@@ -4,7 +4,7 @@ window.cipher = {
 
     let valorascii, result, newletter, stringResult = "", cont = 0;
       do {
-        if (string.charCodeAt(cont) > 90 || string.charCodeAt(cont) < 65) {
+        if (string.charCodeAt(cont) > 90 || string.charCodeAt(cont) < 65) { 
           stringResult = stringResult + string.charAt(cont);
         } else {
           valorascii = string.charCodeAt(cont);
@@ -34,7 +34,6 @@ window.cipher = {
           }
           result = result + 65;
           newletter = String.fromCharCode(result);
-          //alert(newletter);
           stringResult = stringResult + newletter;
       }
         cont = cont + 1;

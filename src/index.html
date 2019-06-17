@@ -1,77 +1,80 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-<link rel="stylesheet" href="style.css" >
-  <head>
-    <meta <charset="utf-8">
-    <title>CIPHER-LOVE</title>
-    <link rel="icon" href="img/corazon.png">
-  </head>
-  <body >
-    <!-- Aquí empieza el encabezado principal que se mantendrá en todasa las páginas de nuestro sitio web -->
-      <header >
-           <img src="img/header.png" id="logo">
-      </header>
-    <!-- Aquí empieza el contenido principal de nuestra página -->
-    <main>
+<link rel="stylesheet" href="style.css">
 
-      <!-- Aquí se encuentra la pantalla del login-->
-      <div id="pantalla1" >
+<head>
+  <meta <charset="utf-8">
+  <title>CIPHER-LOVE</title>
+  <link rel="icon" href="img/corazon.png">
+</head>
+
+<body>
+  <!-- Aquí empieza el encabezado principal que se mantendrá en todasa las páginas de nuestro sitio web -->
+  <header>
+    <img src="img/header.png" id="logo">
+  </header>
+  <!-- Aquí empieza el contenido principal de nuestra página -->
+  <main>
+
+    <!-- Aquí se encuentra la pantalla del login-->
+    <div id="pantalla1">
+      <br>
+      <img src="img/welcome.png" id="inicio">
+      <input type="password" id="clave" placeholder=" Ingresa la clave" size="15">
+      <br>
+      <button type="button" id="capturarClave">INGRESAR </button>
+      <br>
+
+    </div>
+    <!--******* Aquí se encuentra la PANTALLA 2 ********-->
+    <div id="pantalla2" class="mostrarOcultar">
+
+      <br>
+      Ingresa tu mensaje: <input type="text" id="mensaje" placeholder="Mensaje Secreto...">
+      <br>
+      <br>
+      Ingresa tu Numero Cipher-love: <input type="number" id="offset">
+      <br>
+      <button type="button" id="cifrar">CIFRAR</button>
+      <button type="button" id="descifrar">DESCIFRAR</button>
+      <br>
+      <img src="img/45596.gif">
+    </div>
+
+    <!--******* Aquí se encuentra la PANTALLA 3 ********-->
+    <div id="pantalla3" class="mostrarOcultar">
+      <img src="img/candado.gif">
+      <h2>Su mensaje secreto es:</h2>
+      <legend>
         <br>
-        <img src="img/welcome.png"  id="inicio">
-        <input type="password" id="clave" placeholder=" Ingresa la clave" size="15">
-        <br>
-        <button type="button" id="capturarClave">INGRESAR </button>
-        <br>
+        <p id="escribirMensaje"></p>
+      </legend>
+      <button type="button" id="volver">VOLVER</button>
+      <button type="button" id="salir">SALIR</button>
+    </div>
 
-      </div>
-      <!--******* Aquí se encuentra la PANTALLA 2 ********-->
-      <div id="pantalla2" class="mostrarOcultar">
+    <!--******* Aquí se encuentra la PANTALLA 4 ********-->
+    <div id="pantalla4" class="mostrarOcultar">
+      <img src="img/pant4.png" id="fin">
+    </div>
 
-        <br>
-        Ingresa tu mensaje: <input type="text" id ="mensaje" placeholder="Mensaje Secreto...">
-        <br>
-        <br>
-        Ingresa tu Numero Cipher-love: <input type="number" id="offset" >
-        <br>
-        <button type ="button" id="cifrar">CIFRAR</button>
-        <button type ="button" id="descifrar">DESCIFRAR</button>
-        <br>
-        <img src="img/45596.gif" >
-      </div>
+  </main>
 
-      <!--******* Aquí se encuentra la PANTALLA 3 ********-->
-      <div id="pantalla3" class="mostrarOcultar">
-        <img src="img/candado.gif" >
-        <h2>Su mensaje secreto es:</h2>
-        <legend >
-          <br>
-          <p id="escribirMensaje"></p>
-        </legend>
-        <button type="button" id="volver">VOLVER</button>
-        <button type="button" id="salir">SALIR</button>
-      </div>
+  <!-- Y aquí está el pie de página principal que utilizaremos en todas las páginas de nuestro sitio web -->
+  <footer>
+    ©Copyright 2050 by nobody. All rights reversed.<a href="https://www.facebook.com/jorgelis.ari" target="_blank"> <img
+        src="img/facebook.png" id="facebook"> </a>
+    <a href="https://www.instagram.com/jorgelisari/" target="_blank"> <img src="img/instagram.png" id="instagram"> </a>
+    <a href="https://twitter.com/login?lang=es" target="_blank"> <img src="img/twitter.png" id="twitter"> </a>
 
-      <!--******* Aquí se encuentra la PANTALLA 4 ********-->
-      <div id="pantalla4" class="mostrarOcultar">
-        <img src="img/pant4.png"  id = "fin">
-      </div>
+  </footer>
 
-    </main>
+  <!-- Y aquí linkeamos con nuestro archivos de JAVASCRIPT-->
+  <script type="text/javascript" src="index.js">
+  </script>
+  <script type="text/javascript" src="cipher.js">
+  </script>
 
-    <!-- Y aquí está el pie de página principal que utilizaremos en todas las páginas de nuestro sitio web -->
-    <footer>
-      ©Copyright 2050 by nobody. All rights reversed.<a href="https://www.facebook.com/jorgelis.ari" target="_blank"> <img src="img/facebook.png" id="facebook"> </a>
-      <a href="https://www.instagram.com/jorgelisari/" target="_blank"> <img src="img/instagram.png"  id ="instagram"> </a>
-      <a href="https://twitter.com/login?lang=es" target="_blank"> <img src="img/twitter.png" id="twitter"> </a>
-
-    </footer>
-
-    <!-- Y aquí linkeamos con nuestro archivos de JAVASCRIPT-->
-    <script type="text/javascript" src="index.js">
-    </script>
-    <script type="text/javascript" src ="cipher.js">
-    </script>
-
-  </body>
+</body>
 
 </html>
